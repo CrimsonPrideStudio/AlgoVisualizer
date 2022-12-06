@@ -2,6 +2,8 @@ import random
 from tkinter import *
 from tkinter import ttk
 from bubbleSort import bubble
+from heapSort import heapSort
+from quikSort import quickSort
 
 tk = Tk()
 tk.title("ALAN")
@@ -31,7 +33,15 @@ def draw(data, color_array):
 
 
 def startAlgo():
-    bubble(data, draw, speedscale.get())
+    if not data:
+        return
+
+    if reg_algo.get() == "Bubble Sort":
+        bubble(data, draw, speedscale.get())
+
+    elif reg_algo.get() == "QuickSort":
+        quickSort(data, 0, len(data) - 1, draw, speedscale.get())
+        draw(data, ["green" for x in range(len(data))])
 
 
 def genrate():
@@ -51,7 +61,7 @@ lable1 = Label(tk, text="Algorithm", font=("Gretoon", 16), bg="#252525", width=1
 lable1.place(x=5, y=5)
 
 algo_menu = ttk.Combobox(tk, width=12, font=("new roman", 14), textvariable=reg_algo,
-                         values=["Bubble Sort", "Insertion Sort", "Merge Sort", "Heap Sort"])
+                         values=["Bubble Sort", "QuickSort", "Insertion Sort", "Merge Sort", "Heap Sort"])
 algo_menu.place(x=180, y=5)
 algo_menu.current(0)
 
