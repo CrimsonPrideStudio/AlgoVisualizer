@@ -91,7 +91,7 @@ start = Button(tk, text="Start", font=("arial", 15, "italic bold"), bg="#252525"
                relief=SUNKEN, command=startAlgo)
 start.place(x=750, y=5)
 
-speedlable = Label(tk, text="Speed", font=("arial", 14), bg="#252525", width=7, fg="#C040C0", relief=GROOVE, bd=1)
+speedlable = Label(tk, text="Time", font=("arial", 14), bg="#252525", width=7, fg="#C040C0", relief=GROOVE, bd=1)
 speedlable.place(x=400, y=5)
 speedscale = Scale(tk, from_=0.1, to=5.0, resolution=0.2, length=200, digits=2, orient=HORIZONTAL, font=("arial", 10),
                    relief=GROOVE, width=6, bg="#FFC0FF")
