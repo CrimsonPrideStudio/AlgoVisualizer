@@ -2,8 +2,9 @@ import random
 from tkinter import *
 from tkinter import ttk
 from bubbleSort import bubble
-from heapSort import heapSort
+from insertion import insertionSort
 from quikSort import quickSort
+from MergeSort import sort
 
 tk = Tk()
 tk.title("ALAN")
@@ -41,8 +42,12 @@ def startAlgo():
 
     elif reg_algo.get() == "QuickSort":
         quickSort(data, 0, len(data) - 1, draw, speedscale.get())
-        draw(data, ["green" for x in range(len(data))])
 
+    elif reg_algo.get() == "Merge Sort":
+        sort(data, draw, speedscale.get())
+    elif reg_algo.get() == "Insertion Sort":
+        insertionSort(data, draw, speedscale.get())
+    draw(data, ["green" for x in range(len(data))])
 
 def genrate():
     global data
