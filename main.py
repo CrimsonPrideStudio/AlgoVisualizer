@@ -66,7 +66,7 @@ lable1 = Label(tk, text="Algorithm", font=("Gretoon", 16), bg="#252525", width=1
 lable1.place(x=5, y=5)
 
 algo_menu = ttk.Combobox(tk, width=12, font=("new roman", 14), textvariable=reg_algo,
-                         values=["Bubble Sort", "QuickSort", "Insertion Sort", "Merge Sort", "Heap Sort"])
+                         values=["Bubble Sort", "QuickSort", "Insertion Sort", "Merge Sort"])
 algo_menu.place(x=180, y=5)
 algo_menu.current(0)
 
